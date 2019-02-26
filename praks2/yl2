@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+# Saavutused
+#
+echo -n "Tanel Käomets" # väljastab ees- ja perenimi
+echo "" # lisab vaherea
+echo -e "Õppegrupp: IS118" # väljastab õppegrupi
+echo "" # lisab vaherea
+echo -n "Kuidas sulle tundub antud aine?" # väljstab küsimuse
+echo "" # väljastab vaherea
+echo -e "Vastus: Antud aine tundub põnev." # väljastab vastuse
+echo "" # väljastab vaherea
+echo -n "Millised on sinu praegused muljed ja edasijõudmise plaanid?" # väljastab küsimuse
+echo "" # väljastab vaherea
+echo -e "Vastus: Olen väga positiivselt meelestatud ning tahaks omanadada uusi teadmisi." # väljastab vastuse
+#
+# skripti lõpp

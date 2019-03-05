@@ -1,6 +1,6 @@
 #!/bin/bash
 # tervitamise skript
 
-echo -n "Sisesta oma ees- ja perenimi:"
-read eesnimi perenimi
-echo "Tere tulemast, $eesnimi $perenimi"
+echo -n "Sisesta oma ees- ja perenimi:" #ütleb et sisestaksid oma eesnimi ja perenime
+read eesnimi perenimi # tuleb kirjutada enda eesnimi ja perenimi
+echo "Tere tulemast, $eesnimi $perenimi" # tervitab sind nende andmetega mis ennem sisestasid

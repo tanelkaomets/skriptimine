@@ -1,0 +1,10 @@
+#!/bin/bash
+# Bussiskript
+echo -n "Mitu reisijat on grupis?:"
+read reisijad
+echo -n "Mitu kohta on bussis?:"
+read bussikohad
+bussid=$(expr $reisijad / $bussikohad) #mitu bussi on vaja
+ylejaanud=$(expr $reisijad % $bussikohad) #Mitu inimest üle jääb
+
+echo "Täielikult täidetud busse on $bussid ning maha jääb $ylejaanud inimest."

@@ -1,0 +1,23 @@
+#!/bin/bash
+# Küpsise tordi skript
+
+echo -n "Kui suur on aluskandik (pikkus) sentimeetrites?:"
+read pikkus #salvestab siestatud andmed
+echo -n "Kui suur on aluskandik (laius) sentimeetrites?:"
+read laius
+echo -n "Kui suuri küpsiseid tordil kasutatakse (pikkus) sentimeetrites?:"
+read pikkus2
+echo -n "Kui suuri küpsiseid tordil kasutatakse (laius) sentimeetrites?:"
+read laius2
+echo -n "Mitme kihilist torti soovikse teha?:"
+read kihid
+echo -n "Mitu küpsist on ühes pakis (kogus)?:"
+read kogus
+kandik=$(expr "$pikkus" \* "$laius") #arvutab välja kui suur on kandik
+kypsis=$(expr "$pikkus2" \* "$laius2") #arvutab välja kui suur on küpsis
+kypsis2=$(expr "$kandik" / "$kypsis") #arvutab välja palju vaja küpsiseid selle kandiku suuruse jaoks
+kogus2=$(expr "$kypsis2" \* "$kihid") #arvtab välja kihtide arvu põhjal palju küpsiseid vaja
+pakk=$(expr "$kogus2" / "$kogus") #arvutab välja mitu pakki küpsist on vaja
+
+echo "Kokku läheb vaja $kogus2 küpsist ehk $pakk pakki." #ütleb palju kulub küpsiseid ja mitu pakki on vaja
+

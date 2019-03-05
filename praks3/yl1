@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+# Kuupäev ja kalender
+#
+paev=$(date +"%A" ) #väljastab mis päev täna on
+kell=$(date +"%T") #väljastab praeguse kellaja
+kuu=$(date +"%B") #väljastab mis kuu praegu on
+kuupaev=$(date +"%d") #väljastab mitmes kuupäev on
+aasta=$(date +"%Y") #väljastab mis aasta hetkel on
+now=$(date +"%T") #väljastab praeguse kellaaja
+echo "Today is $paev, $kuu $kuupaev, $aasta" #kirjutab välja praeguse päeva, kuu, kuupäeva ja aasta
+echo "Time is: $now" # kirjutab välja praeguse kellaaja
+echo "" #vaherida
+echo "$kuu kuu kalender on järgmine:"
+echo ""  #vaherida
+cal -m $kuu #väljastab praeguse kuu kalendri
+

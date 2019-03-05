@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# log failide otsija ja sorteerija
+
+find /var -name "*.log" 2>/dev/null -exec wc -l {} \; | sort -n -r #otsib /var kaustast .log lõpuga failib ja järjestab need failid ridade arvu järgi

@@ -1,4 +1,5 @@
 #!/bin/bash
+# Kaua masin on töötanud
 
 echo -n "$(hostname) " #väljastab masina hostname
 echo -e "$(uptime | awk '{ print $1}') $(uptime -p)" #väljastab praeguse aja ja ütleb kaua arvuti on üleval olnud

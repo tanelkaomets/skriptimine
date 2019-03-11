@@ -1,0 +1,11 @@
+#!/bin/bash
+# Pythagorase teoreem
+echo -n "Sisesta täisnurkse kolmnurga a külje pikkus(cm):"
+read kylga #Sisestad külje a pikkuse
+echo -n "Sisesta täisnurkse kolmnuga b külje pikkus(cm):"
+read kylgb #Sisestad külje b pikkuse
+pool=$(echo "$kylga^2" | bc) #Arvutab külje a ruudu
+pool2=$(echo "$kylgb^2" | bc) #Arvutab külje b ruudu
+kokku=$(echo "$pool"+"$pool2" | bc) #Liidab mõlema külje ruudu kokku
+hypo=$(echo "scale=3;sqrt($kokku)" | bc) #Võtab ruutjuurde ja näitab maksimaalselt 3 koma kohta
+echo "Kolmnurga hüpotenuus on $hypo" #Ütleb hüpotenuusi suuruse

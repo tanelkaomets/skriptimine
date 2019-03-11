@@ -1,0 +1,10 @@
+#!/bin/bash
+# Reisikalender
+
+echo -n "Millal sõidad ära:"
+read paev #Siestad kunas ära lähed
+echo -n "Kauaks sõidad ära:"
+read kaua #Sisestad kauaks lähed ära
+tagasi=$(expr "$paev" + "$kaua") #Liidab kokku kunas ära lahed ja tagasi tuled
+tagasi2=$(expr "$tagasi" % "7") # Leiab jäägi 7st
+echo "Tagasi oled päeval number: $tagasi2"

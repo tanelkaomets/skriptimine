@@ -1,0 +1,15 @@
+#!/bin/bash
+# Heroni valem
+echo -n "Sisesta kolmnurga a külje pikkus(cm):"
+read kylga #Sisestad külje a pikkuse
+echo -n "Sisesta kolmnuga b külje pikkus(cm):"
+read kylgb #Sisestad külje b pikkuse
+echo -n "Sisesta kolmnurga c külje pikkus(cm):"
+read kylgc #Sisestad külje c pikkuse
+ymber=$(echo "scale=3;($kylga+$kylgb+$kylgc)/2" | bc) #Arvutab kolmnurga ümbermõõdu
+ymbera=$(echo "$ymber-$kylga" | bc) #Arvutab ümbermõõdu ja külje vahe
+ymberb=$(echo "$ymber-$kylgb" | bc) #Arvutab ümbermõõdu ja külje vahe
+ymberc=$(echo "$ymber-$kylgc" | bc) #Arvutab ümbermõõdu ja külje vahe
+kokku=$(echo "$ymber*$ymbera*$ymberb*$ymberc" | bc) #Heroni valemist
+heron=$(echo "scale=3;sqrt($kokku)" | bc) #Kasutab heroni valemit
+echo "Kolmnurga pindala on $heron" #Ütleb pindala suuruse

@@ -1,0 +1,12 @@
+#!/bin/bash
+# Paarisarvu kontroll
+
+echo -n "Sisesta suvaline täisarv: "
+read taisarv
+jaak=$(expr "$taisarv" % "2" ) #Arvutame jäägi 2-ga jagamisel kui tekib jääk siis on tegu paaritu arvuga.
+if [ $jaak -eq 0 ]
+then
+	echo "$taisarv on paaris."
+else
+	echo "$taisarv on paaritu."
+fi

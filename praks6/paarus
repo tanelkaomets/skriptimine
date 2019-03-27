@@ -1,0 +1,13 @@
+#!/bin/bash
+# Paarisarvu kontroll
+exec 2>/dev/null
+jaak=$(expr "$1" % "2" ) #Arvutame jäägi 2-ga jagamisel kui tekib jääk siis on tegu paaritu arvuga.
+if [ "$1" != "" ] && [ $jaak -eq 0 ]
+then
+	echo "Antud arv on paaris"
+elif [ "$1" != "" ]
+then
+	echo "Antud arv on paaritu"
+else
+	echo "Unustasite käsureale kirjutada arvu."
+fi

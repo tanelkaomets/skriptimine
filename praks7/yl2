@@ -1,0 +1,21 @@
+#!/bin/bash
+# Kuu 
+
+echo -n "Sisesta kuu number: "
+read kuu
+
+if [ $kuu -eq 1 -o $kuu -eq 2 -o $kuu -eq 12 ]
+then
+	echo "Praegu on talv." # Kui arv on  võrdne 1,2 või 12 siis on talv.
+elif [ $kuu -eq 3 -o $kuu -le 5 ]
+then
+	echo "Praegu on kevad." # Kui arv on võrdne 3-ga,väiksem kui 5 või võrdne 5-ga siis on kevad.
+elif [ $kuu -eq 6 -o $kuu -le 8 ]
+then
+	echo "Praegu on suvi." # Kui arv on võrdne 6-ga,väiksem kui 8 või võrdne 8-ga siis on suvi.
+elif [ $kuu -eq 9 -o $kuu -le 11 ]
+then
+	echo "Praegu on sügis." # Kui arv on võrdne 9-ga,väiksem kui 11 või võrdne 11-ga siis on sügis.
+else
+	echo "Antud kuu numbrit ei ole." # Kui sisestada arvu mis pole vahemikus 1-12 annab vastava teate.
+fi

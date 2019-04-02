@@ -1,0 +1,20 @@
+#!/bin/bash
+# Vanus
+
+echo -n "Sisesta oma vanus: "
+read vanus
+if  [ $vanus -lt 11 ]
+then
+	echo "Oled laps." #Kui vanus on väiksem kui 11 väljastab teate, et oled laps.
+elif [ $vanus -lt 18 ]
+then
+	echo "Oled nooruk." #Kui vanus on väiksem kui 18 väljastab teate, et oled nooruk.
+elif [ $vanus -lt 63 ]
+then
+	echo "Oled täiskasvanu." #Kui vanus on väiksem kui 63 väljastab teate, et oled täiskasvanu.
+elif [ $vanus -ge 63 ]
+then
+	echo "Oled seenior." #Kui vanus on üle 63 väljstab teate, et oled seenior.
+else
+	echo "Vigane sisend." #Kui ei sisesta arvu ütleb, et vigane sisend.
+fi

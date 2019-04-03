@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo -n "Sisesta suvaline täisarv: "
+read arv #Loeb arvu mille sisestasime
+summa=0
+while [ $arv -ne 0 ] #Teeb seda tehet kuni täisarv ei võrdu 0-ga
+do
+	jaak=$(expr $arv % 10) #arv jagatakse ja leitakse jääk
+	summa=$(expr $summa + $jaak) #Summa ja jääk liidetakse kokku
+	arv=$(expr $arv / 10) #arv jagatakse 10-ga
+done
+echo "Numbrite summa on: $summa"

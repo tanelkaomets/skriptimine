@@ -1,0 +1,11 @@
+#!/bin/bash
+# 10-esimese paarisarvude summa
+summa=0
+for (( arv=1; arv<11; arv++ ))
+do
+	jaak=$(expr $arv % 2) # Jagab kõik arvud vahemikus 1-10 2ga ja kui tekib jääk siis pole tegu paarisarvuga
+	if [ $jaak -eq 0 ]; then # Kui ei teki jääki on tegu paarisarvuga
+		summa=$(expr "$summa" + "$arv") # Liidab iga paarisarvu kokku koos eelmise summaga
+	fi
+done
+echo "Paarisarvude summa vahemikus 1-10 on: $summa" #Väljastab palju summa kokku tuli

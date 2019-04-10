@@ -1,0 +1,21 @@
+#!/bin/bash
+# Seest tühi kast
+
+echo -n "Sisesta ridade arv: "
+read rida
+echo -n "Sisesta tärnide arv: "
+read tarn
+for (( a=1; a<=$rida; a++ )) #Teeb nii palju ridu nagu sisestasime
+do
+	for (( b=1; b<=$tarn; b++ )) #Teeb nii palju tärne nagu kirjutasime
+	do
+	if [ $a -eq 1 -o $a -eq $rida ]; then
+	echo -n "*"	#trükib tärni kui a võrdub 1ga
+	elif [ $b -eq 1 -o $b -eq $tarn ]; then
+	echo -n "*" #trükib tärni kui b võrdub 1ga
+	else
+	echo -n " " #Kui  ei sobi ükski väide teeb tühiku
+	fi
+	done
+echo ""
+done

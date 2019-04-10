@@ -1,0 +1,11 @@
+#!/bin/bash
+# Kujund
+
+for (( a=1; a<=5; a++ )) #Teeb ridu alustades 1-st kuni 5ni
+do
+	for (( b=1; b<=5; b++ )) #teeb samamoodi ainult, et lisab ka *
+	do
+		echo -n "* "
+	done
+echo ""
+done

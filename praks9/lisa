@@ -1,0 +1,17 @@
+#!/bin/bash
+#  Tagurpidi püramiid
+
+echo -n "Sisesta ridade arv: "
+read rida
+for (( a=$rida; a>=1; a-- )) #Teeb nii palju ridu nagu sisestasime, ainult, et  nüüd teeb tagurpidi neid
+do
+	for (( b=1; b<=$rida; b++ )) #Arvutab märke reas
+	do
+	if [ $a -gt $b ];then
+		echo -n "o " #Kui a on võrdne b-ga siis väljastab * nii mitu korda
+else
+echo -n "* "
+fi
+	done
+echo ""
+done
